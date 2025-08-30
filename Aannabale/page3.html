@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Beautiful Scene</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <div class="scene">
+        <img src="scenery.jpg" alt="A beautiful scenery" class="background-image">
+
+        <div class="characters">
+            <img src="man.jpg" alt="Man" class="man">
+            <img src="woman.jpg" alt="Woman" class="woman">
+        </div>
+
+        <div class="poem-overlay">
+            <p class="final-poem">
+                "तुझे नज़रअंदाज़ करूं मैं में इतना गुरूर कहा। और तुझे देख पाऊं सामने से जी भर के मेरी आँखों में इतना नूर कहा।"
+                <br><br> "How can I ignore you when I have so much pride? And how can I gaze at you from the front with full satisfaction when my eyes have so much light?"
+            </p>
+        </div>
+        <div class="video-container">
+            <video width="320" height="240" controls>
+                <source src="your-animation-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <img src="your-image-for-page3.jpg" alt="Additional Image" class="additional-image">
+
+    </div>
+    <script>
+        setTimeout(function() {
+            parent.postMessage({
+                type: 'navigate',
+                page: 'page4.html'
+            }, '*');
+        }, 10000);
+    </script>
+</body>
+
+</html>

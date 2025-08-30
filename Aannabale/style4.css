@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #212121;
+    font-family: 'Comic Sans MS', cursive;
+    color: #e0f2f1;
+    text-align: center;
+}
+
+.final-message-container {
+    background-color: #424242;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    border: 3px solid #00bcd4;
+    max-width: 80%;
+}
+
+.final-message-container p {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.final-message-container .reality-check {
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite alternate;
+    margin-top: 30px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}

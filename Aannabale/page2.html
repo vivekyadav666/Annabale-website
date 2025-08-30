@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something Special</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="glowing-particle"></div>
+    <div class="glowing-particle"></div>
+    <div class="glowing-particle"></div>
+    <div class="glowing-particle"></div>
+
+    <div class="content-container">
+        <div class="text-section">
+            <h1>There is something special and so beautiful in the world...</h1>
+            <p class="poem">
+                "जो जी भर के देखने बैठे उसे तो एक शाम क्या एक उम्र भी कम लगती है। तू इतनी खूबसूरत है कि तेरे आगे मुझे दुनिया की हर खूबसूरत चीज बस भरम लगती है।"
+                <br><br> "Whoever sits to gaze at you, finds even a lifetime too short, let alone an evening. You are so beautiful that in your presence, every beautiful thing in the world seems like an illusion to me."
+            </p>
+        </div>
+        <div class="image-carousel">
+            <img class="rotating-image active" src="image1.jpg" alt="Special Image 1">
+            <img class="rotating-image" src="image2.jpg" alt="Special Image 2">
+            <img class="rotating-image" src="image3.jpg" alt="Special Image 3">
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.rotating-image');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+        setInterval(showNextImage, 3000);
+
+        setTimeout(function() {
+            parent.postMessage({
+                type: 'navigate',
+                page: 'page3.html'
+            }, '*');
+        }, 10000);
+    </script>
+</body>
+
+</html>
